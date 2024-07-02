@@ -2,7 +2,7 @@ import OpenAI from "openai";
 import Resolver from '@forge/resolver';
 
 const openai = new OpenAI({
-    apiKey: 'sk-proj-bbBlXCgqSi9d0NmAmFhPT3BlbkFJP87tEphdO03MFBPNUgcX' // Make sure to replace with your actual API key
+    apiKey: '' // Make sure to replace with your actual API key
 });
 
 const resolver = new Resolver();
