@@ -1,0 +1,47 @@
+modules:
+  macro:
+    - key: con-test
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: ai classifier
+      config: true
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/d77d8849-c8ee-492a-8cd2-0223000d75a8
+permissions:
+  external:
+    fetch:
+      backend:
+        - 'https://api.openai.com/*'
+    images:
+        - 'https://wac-cdn.atlassian.com/dam/jcr:52f4a0fd-a07d-4c11-95d4-1ca0fd256d7c/master.png?cdnVersion=1867'
+        - 'https://clubrunner.blob.core.windows.net/00000010506/Images/CareerVillage-logo.png.jpg'
+        - 'https://yt3.googleusercontent.com/ytc/AIdro_n4k0wKZLq25_sCfof3HIOR_Bm0YAhiXfdYwXfG-96OHA=s900-c-k-c0x00ffffff-no-rj'
+        - 'https://media.licdn.com/dms/image/C560BAQGciDF9IBqxxA/company-logo_200_200/0/1630654804903/collab_impact_logo?e=2147483647&v=beta&t=ZF7LvkWqKUVI6E5Zu9-hHgxUUsn_blKnv3uJUmRO0wE'
+        - 'https://images.squarespace-cdn.com/content/v1/520111afe4b0748af59ffc18/1526951076845-92PA6EF98MX89HJYB9EY/Educate-logo-box.jpg'
+        - 'https://yt3.googleusercontent.com/ytc/AIdro_lrgVOPLS3kG0uLC0CTQ6echkoFfqi4fiNrfOnQHd4H5g=s900-c-k-c0x00ffffff-no-rj'
+        - 'https://s3-us-west-2.amazonaws.com/cbi-image-service-prd/modified/a0a80a97-4085-44b4-88b5-0a6e49b4c43e.png'
+        - 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Humanitix_logo_without_wordmark.png'
+        - 'https://d2y4rc9q318ytb.cloudfront.net/accounts/beaec441-926f-4353-b394-7a6128a21bff/540x350/1689175602837-34d9c14d.png'
+        - 'https://static.ethicaljobs.com.au/media/1630979567_oVrxE_.png'
+        - 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Ruang_Guru_logo.svg/1200px-Ruang_Guru_logo.svg.png'
+        - 'https://pbs.twimg.com/profile_images/1414879327053918211/KSllWFKu_400x400.jpg'
+        - 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUCyuo-K3oMzBtJ0djIBc3z-0xxwz3L78uvw&s'
+        - 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQe2XYkyO-daVomcO_i6_TuHZbhwEkauuBaw&s'
+        - 'https://images.squarespace-cdn.com/content/v1/57c0d8d1e58c622e8b6d5328/1491531731738-JAM59MLO2PW3W6C21VQD/logo.png'
+  scopes:
+    - read:confluence-user
+    - read:confluence-content.summary
+    - read:page:confluence
+    - write:page:confluence
+    - read:confluence-content.all
+    - read:comment:confluence

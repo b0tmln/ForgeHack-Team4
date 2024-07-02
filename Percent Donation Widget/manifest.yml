@@ -1,0 +1,27 @@
+modules:
+  macro:
+    - key: percent-api
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: percent payment
+      config: true
+  function:
+    - key: resolver
+      handler: index.handler
+permissions:
+  external:
+    images:
+      - https://api.percent.com/v1/donations
+    fetch:
+      backend:
+        - api.percent.com
+  scopes: []
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/77c0a069-73cf-429f-9e81-8bd00c967b76

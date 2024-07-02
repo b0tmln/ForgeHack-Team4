@@ -1,0 +1,23 @@
+modules:
+  macro:
+    - key: forge-hack-table
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: final forge table
+      config: true
+  function:
+    - key: resolver
+      handler: index.handler
+permissions:
+  scopes:
+    - 'read:confluence-user'
+    - 'storage:app'
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/a03f932f-4ffa-4929-a979-4a9fd97ae980
